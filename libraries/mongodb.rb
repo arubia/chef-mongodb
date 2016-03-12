@@ -25,7 +25,6 @@ class Chef::ResourceDefinitionList::MongoDB
   def self.configure_replicaset(node, name, members)
     # lazy require, to move loading this modules to runtime of the cookbook
     require 'rubygems'
-    require 'bson_ext'
     require 'mongo'
 
     if members.length == 0
