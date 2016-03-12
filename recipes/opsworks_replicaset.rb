@@ -2,7 +2,7 @@
 node.set['mongodb']['is_replicaset'] = false
 node.set['mongodb']['cluster_name'] = node['mongodb']['cluster_name']
 
-default['mongodb']['ruby_gems'] = {
+node.set['mongodb']['ruby_gems'] = {
   :mongo => nil,
   :bson_ext => nil
 }
