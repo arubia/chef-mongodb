@@ -2,7 +2,7 @@
 node.set['mongodb']['is_replicaset'] = false
 node.set['mongodb']['cluster_name'] = node['mongodb']['cluster_name']
 
-include_recipe "mongodb"
+include_recipe "mongodb::install"
 include_recipe 'mongodb::mongo_gem'
 
 Chef::Log.info "Configuring replicaset with OPSWORKS REPLICASET"
