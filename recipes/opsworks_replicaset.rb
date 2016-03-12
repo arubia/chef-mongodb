@@ -8,7 +8,7 @@ include_recipe "mongodb::mongo_gem"
 
 Chef::Log.info "Configuring replicaset with OPSWORKS REPLICASET"
 
-require "bson"
+require "mongo"
 
 BSON::Document.new(name: "Joe", age: 33)
 
