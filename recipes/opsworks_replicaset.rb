@@ -4,8 +4,8 @@ node.set['mongodb']['cluster_name'] = node['mongodb']['cluster_name']
 
 node.set['mongodb']['ruby_gems'] = {
   :mongo => nil,
-  :bson => nil,
-  :bson_ext => nil
+  :bson => '4.0.4',
+  :bson_ext => '1.12.1'
 }
 
 include_recipe "mongodb::install"
