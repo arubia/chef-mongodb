@@ -4,6 +4,7 @@ node.set['mongodb']['cluster_name'] = node['mongodb']['cluster_name']
 
 node.set['mongodb']['ruby_gems'] = {
   :mongo => nil,
+  :bson => nil,
   :bson_ext => nil
 }
 
