@@ -8,6 +8,8 @@ include_recipe "mongodb::mongo_gem"
 
 Chef::Log.info "Configuring replicaset with OPSWORKS REPLICASET"
 
+BSON::Document.new(name: "Joe", age: 33)
+
 unless node['mongodb']['is_shard']
   # assuming for the moment only one layer for the replicaset instances
   replicaset_layer_slug_name = node['opsworks']['instance']['layers'].first
