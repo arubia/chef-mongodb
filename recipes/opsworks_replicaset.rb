@@ -1,3 +1,4 @@
+ENV['BSON_EXT_DISABLED'] = true
 
 node.set['mongodb']['is_replicaset'] = false
 node.set['mongodb']['cluster_name'] = node['mongodb']['cluster_name']
