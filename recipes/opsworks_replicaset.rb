@@ -8,6 +8,7 @@ include_recipe "mongodb::mongo_gem"
 
 Chef::Log.info "Configuring replicaset with OPSWORKS REPLICASET"
 
+require "bson"
 BSON::Document.new(name: "Joe", age: 33)
 
 unless node['mongodb']['is_shard']
