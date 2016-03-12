@@ -1,5 +1,5 @@
 
-node.set['mongodb']['is_replicaset'] = true
+node.set['mongodb']['is_replicaset'] = false
 node.set['mongodb']['cluster_name'] = node['mongodb']['cluster_name']
 
 include_recipe 'mongodb::install'
