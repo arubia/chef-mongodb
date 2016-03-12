@@ -12,7 +12,7 @@ unless node['mongodb']['is_shard']
   replicaset_layer_slug_name = node['opsworks']['instance']['layers'].first
   replicaset_layer_instances = node['opsworks']['layers'][replicaset_layer_slug_name]['instances']
 
-  replicaset_members = Chef::ResourceDefinitionList::OpsWorksHelper.replicaset_members(node, replicaset_layer_instances)
+  replicaset_members = Chef::ResourceDefinitionList::OpsWorksHelper.replicaset_members(node)
 
   Chef::ResourceDefinitionList::MongoDB.configure_replicaset(node, replicaset_layer_slug_name, replicaset_members)
 end
