@@ -31,5 +31,5 @@ default['mongodb']['config']['rest'] = false
 default['mongodb']['config']['smallfiles'] = false
 default['mongodb']['config']['oplogSize'] = nil
 
-default['mongodb']['config']['replSet'] = nil
+default['mongodb']['config']['replSet'] = 'rs0'
 default['mongodb']['config']['keyFile'] = '/etc/mongodb.key' if node['mongodb']['key_file_content']
